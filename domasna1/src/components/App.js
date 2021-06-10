@@ -1,6 +1,6 @@
 import React from 'react';
-import {Cars} from './cars';
-import {Year} from './year';
+import {Cars} from './Cars';
+import {Year} from './Price';
 
 let car1={
     brand: "Audi",
