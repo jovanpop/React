@@ -17,9 +17,7 @@ export function Todos(props){
                                 onChange={()=>{props.markTodoAsDone(todo)}}
                             />
                             
-                            <button onClick={function DeleteItem(){
-                                let DeleteEl=document.getElementById(todo.id);
-                                DeleteEl.remove(todo.id);}}>Delete</button>
+                            <button onClick={()=>props.DeleteTodo(todo.id)}>Delete</button>
                         </li>
                     )
             })
@@ -32,5 +30,5 @@ export function Todos(props){
 Todos.propTypes = {
     todos: PropTypes.array.isRequired,
     markTodoAsDone:PropTypes.func,
-    DeleteItem: PropTypes.func
+    DeleteTodo: PropTypes.func
 }

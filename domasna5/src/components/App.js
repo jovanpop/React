@@ -51,6 +51,9 @@ export function App() {
             ]
         )
     }
+    function DeleteTodo(id){
+        setTodos (todos.filter((item)=>item.id !==id));
+    }
 
     return (
         <div id="app">
@@ -99,7 +102,7 @@ export function App() {
              <button onClick={addTodo}>
                  Add Todo
              </button>
-            <Todos todos={todos} markTodoAsDone={markTodoAsDone} />
+            <Todos todos={todos} markTodoAsDone={markTodoAsDone} DeleteTodo={DeleteTodo} />
         </div>
     )
 }
